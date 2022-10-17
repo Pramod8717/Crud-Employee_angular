@@ -1,0 +1,38 @@
+<table class="table table-hover">
+    <thead class="table-head">
+        <tr>
+            <th>Gender</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Pan Card</th>
+            <th>Date Of Birth</th>
+            <th>Hobbies</th>
+            <th>Family Member Details</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employeeService.allEmployee">
+            <td>{{employee.gender}}</td>
+            <td>{{employee.firstName}}</td>
+            <td>{{employee.lastName}}</td>
+            <td>{{employee.address}}</td>
+            <td>{{employee.panCard}}</td>
+            <td>{{employee.dateOfBirth}}</td>
+            <td>{{employee.hobbies}}</td>
+            <td>{{employee.familyMemberDetails}}</td>
+                        
+            <td>
+                <button mat-mini-fab (click)="editEmployee(employee)" color="primary" style="margin-right: 10px;"
+                    matTooltip="Edit {{employee.firstName}}">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-mini-fab (click)="deleteEmployee(employee.id)" color="warn"
+                    matTooltip="Delete {{employee.firstName}}">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

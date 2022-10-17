@@ -1,0 +1,41 @@
+.header {
+    background-color: rgba(204, 199, 199, 0.801);
+    color: rgb(146, 7, 7);
+    height: 70px;
+    text-align: center;
+    font-size: 50px;
+    
+}
+
+
+.footer {
+    background-color: rgba(204, 199, 199, 0.801);
+    color: maroon;
+    /* position: fixed; */
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    bottom: 0%;
+    z-index: 1100;
+    font-style: italic;
+   
+}
+
+.employee-body {
+    margin: 0 20px 0 20px;
+    color: rgb(134, 21, 30);
+}
+
+.col-md-9 {
+    background-color: rgb(247, 240, 241);
+}
+
+.col-md-3 {
+    background-color: rgb(243, 233, 233);
+}
+
+.bacchan{
+    bottom: 0%;
+    right: 0%;
+    margin-left: 60%;
+}

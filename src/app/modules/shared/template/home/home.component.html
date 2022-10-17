@@ -1,0 +1,34 @@
+<div class="header">
+  <app-header></app-header>
+</div>
+
+<div class="employee-body">
+  <div class="row mt-4">
+    <div class="col-md-3">
+      <app-employee-form></app-employee-form>
+    </div>
+    <div class="col-md-9">
+      <mat-tab-group>
+        <mat-tab label="EMPLOYEES">
+          <app-employee-list></app-employee-list>
+        </mat-tab>
+      </mat-tab-group>
+      <img src='assets/images/idfc-bacchan.png' class="bacchan" height="500" width="400">
+
+    </div>
+  </div>
+</div>
+<!-- <br />
+<br /> -->
+
+
+
+<div class="footer">
+  <app-footer></app-footer>
+</div>
+
+<ngx-spinner type="ball-spin">
+  <span style="color: white"> <br />
+    <b>loading</b>
+  </span>
+</ngx-spinner>

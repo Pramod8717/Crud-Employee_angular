@@ -1,0 +1,63 @@
+<div><b>Employee Form</b></div>
+<mat-radio-group [(ngModel)]=employeeService.currentEmployee.gender>
+    <mat-label>Gender</mat-label>
+    <mat-radio-button value="male" class="m-2">Male</mat-radio-button>
+    <mat-radio-button value="female">Female</mat-radio-button>
+</mat-radio-group>
+
+<mat-form-field class="w-100">
+    <mat-label>First Name</mat-label>
+    <input matInput placeholder="First Name" [(ngModel)]="employeeService.currentEmployee.firstName">
+</mat-form-field>
+
+<mat-form-field class="w-100">
+    <mat-label>Last Name</mat-label>
+    <input matInput placeholder="Last Name" [(ngModel)]="employeeService.currentEmployee.lastName">
+</mat-form-field>
+
+<mat-form-field class="w-100">
+    <mat-label>Address</mat-label>
+    <input matInput placeholder="Address" [(ngModel)]="employeeService.currentEmployee.address">
+</mat-form-field>
+
+<mat-form-field class="w-100">
+    <mat-label>Pan Card</mat-label>
+    <input matInput placeholder="Pan Card" [(ngModel)]="employeeService.currentEmployee.panCard">
+</mat-form-field>
+
+<mat-form-field class="w-100">
+    <mat-label>Gender</mat-label>
+    <input matInput placeholder="Gender" [(ngModel)]="employeeService.currentEmployee.gender">
+</mat-form-field>
+
+<mat-form-field class="w-100">
+    <mat-label>Hobbies</mat-label>
+    <input matInput placeholder="Hobbies" [(ngModel)]="employeeService.currentEmployee.hobbies">
+</mat-form-field>
+
+<mat-form-field class="w-100">
+    <mat-label>Family Member Details</mat-label>
+    <input matInput placeholder="Family Member Details" [(ngModel)]="employeeService.currentEmployee.familyMemberDetails">
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="w-100">
+    <mat-label> Date Of Birth</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+
+
+<div class="row mt-3">
+    <div class="col-md-6">
+        <button mat-raised-button color="primary" class="w-100" (click)="save(employeeService.currentEmployee)">
+            <mat-icon>save</mat-icon> SAVE
+        </button>
+    </div>
+    <div class="col-md-6">
+        <button mat-raised-button class="w-100" (click)="clear()">
+            <mat-icon>refresh</mat-icon> CLEAR
+        </button>
+    </div>
+</div>
